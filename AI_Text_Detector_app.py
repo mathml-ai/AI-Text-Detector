@@ -3,10 +3,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-import os
-os.system("pip install xgboost")
-
-import xgboost as xgb
+import XGBoost as xgb
 
 # Load the trained model and vectorizer
 with open("AI_Text_Detector.pkl", "rb") as model_file:
