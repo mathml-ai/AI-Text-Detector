@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-
+import xgboost as xgb
 
 # Load the trained model and vectorizer
 with open("AI_Text_Detector.pkl", "rb") as model_file:
