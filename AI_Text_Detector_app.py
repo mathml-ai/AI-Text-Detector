@@ -3,6 +3,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
+pip install xgboost
 import xgboost as xgb
 
 # Load the trained model and vectorizer
