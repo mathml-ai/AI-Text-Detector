@@ -3,8 +3,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-from xgboost import XGBClassifier
-from sklearn.feature_extraction.text import TfidfVectorizer
+
 
 # Load the trained model and vectorizer
 with open("AI_Text_Detector.pkl", "rb") as model_file:
