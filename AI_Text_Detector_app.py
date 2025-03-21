@@ -1,8 +1,18 @@
+import os
+import sys
+import subprocess
+
+# Ensure XGBoost is installed
+if "xgboost" not in sys.modules:
+    os.environ["PYTHONWARNINGS"] = "ignore:Unverified HTTPS request"
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "xgboost==2.0.3"])
+    import xgboost
+
+from xgboost import XGBClassifier
 import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-from xgboost import XGBClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Load the trained model and vectorizer
