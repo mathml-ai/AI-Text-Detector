@@ -5,8 +5,8 @@ from xgboost import XGBClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Load the trained model and vectorizer using joblib
-model = joblib.load("AI_Text_Detector.joblib")
-vectorizer = joblib.load("vectorizer.joblib")
+model = joblib.load("ai_text.pkl")
+vectorizer = joblib.load("vectorizer.pkl")
 
 def predict(text):
     text_length = len(text.split())
