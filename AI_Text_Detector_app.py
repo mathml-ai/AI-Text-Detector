@@ -1,15 +1,12 @@
 import streamlit as st
 import numpy as np
-import pandas as pd
-import pickle
+import joblib
 from xgboost import XGBClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Load the trained model and vectorizer
-with open("AI_Text_Detector.pkl", "rb") as model_file:
-    model = pickle.load(model_file)
-with open("vectorizer.pkl", "rb") as vectorizer_file:
-    vectorizer = pickle.load(vectorizer_file)
+# Load the trained model and vectorizer using joblib
+model = joblib.load("AI_Text_Detector.joblib")
+vectorizer = joblib.load("vectorizer.joblib")
 
 def predict(text):
     text_length = len(text.split())
