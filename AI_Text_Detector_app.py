@@ -2,20 +2,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-import subprocess
-import sys
-
-# Function to install missing packages dynamically
-def install_package(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-# Ensure xgboost is installed
-try:
-    import xgboost
-except ImportError:
-    install_package("xgboost")
-    import xgboost  # Re-import after installation
-
 from xgboost import XGBClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 
