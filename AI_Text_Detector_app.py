@@ -6,9 +6,9 @@ from xgboost import XGBClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Load the trained model and vectorizer
-with open("C:\\Users\\HP\\Downloads\\AI_Text_Detector.pkl", "rb") as model_file:
+with open("AI_Text_Detector.pkl", "rb") as model_file:
     model = pickle.load(model_file)
-with open("C:\\Users\\HP\\Downloads\\vectorizer (1).pkl", "rb") as vectorizer_file:
+with open("vectorizer.pkl", "rb") as vectorizer_file:
     vectorizer = pickle.load(vectorizer_file)
 
 def predict(text):
